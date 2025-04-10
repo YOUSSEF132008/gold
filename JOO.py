@@ -13,31 +13,6 @@ print("Contact me: \033[94mhttp://t.me/abdoshhba\033[0m")
 print("GoldEagle Script")
 print("Made by General Abdo\n")
 
-# Password URL from GitHub
-PASSWORD_URL = "https://raw.githubusercontent.com/Abdo2613/pess/main/password.txt"
-
-# Fetch the correct password from GitHub
-try:
-    response = requests.get(PASSWORD_URL)
-    if response.status_code == 200:
-        correct_password = response.text.strip()  # Remove spaces or empty lines
-    else:
-        print("❌ Failed to fetch the password. Ensure the link is working.")
-        exit()
-except Exception as e:
-    print(f"❌ Error fetching password: {e}")
-    exit()
-
-# Prompt user for password
-user_password = input("Enter password: ")
-
-# Validate password
-if user_password == correct_password:
-    print("✅ 💯 Correct 😁")
-else:
-    print("❌ 😂 Incorrect")
-    exit()
-
 PROGRESS_API_URL = "https://gold-eagle-api.fly.dev/user/me/progress"
 
 def load_tokens():
